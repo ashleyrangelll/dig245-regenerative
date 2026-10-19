@@ -1,59 +1,36 @@
 
-/* javascript */
-const girlImage = [
-	{
-		name: "Monica",
-		url:
-        "assets/img/MONICA.webp"
-    },
-	{
-		name: "Rachel",
-		url:
-			"assets/img/RACHEL.jpg"
-	},
-	{
-		name: "Pheobe",
-		url:
-			"assets/img/PHOEBE.jpg"
-	},
-];
-/* javascript */
-const guyImage = [
-	{
-		name: "Ross",
-		url:
-        "assets/img/ROSS.jpg"
-    },
-	{
-		name: "Chandler",
-		url:
-			"assets/img/CHANDLER.jpg"
-	},
-	{
-		name: "Joey",
-		url:
-			"assets/img/JOEY.jpg"
-	},
-];
 
-// GIRLS BANK
 const girls = ["Monica", "Phoebe", "Rachel"];
 
-// GUYS BANK
+
 const guys = ["Joey", "Chandler", "Ross"];
 
-// RANDOMLY SELECT ONE GIRL AND ONE GUY
+function randomArrayIndex(arr) {
+	return arr[Math.floor(Math.random() * arr.length)];
+}
+
+document.addEventListener("click", loadRandom);
+function loadRandom(){
+	let result = randomArrayIndex(girls) + " + " + randomArrayIndex(guys);
+	console.log(result);
+	let div = document.querySelector(".result");
+	div.innerHTML = `
+		<h3 class="name">${result}
+		</h3>
+		<img src="${result.url}">
+	`;
+};
+loadRandom();
+
 const girl = girls[Math.floor(Math.random() * girls.length)];
 const guy = guys[Math.floor(Math.random() * guys.length)];
 
-// FIND THE IMAGES ON THE PAGE
 const girlImage = document.getElementById("girlImage");
 const guyImage = document.getElementById("guyImage");
 const title = document.getElementById("friendshipTitle");
 const text = document.getElementById("friendshipText");
 const resultImage = document.getElementById("resultImage");
 
-// ONE GIANT IF / ELSE IF STATEMENT
 
 if (girl === "Monica" && guy === "Joey") {
 
