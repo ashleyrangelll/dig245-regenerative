@@ -1,3 +1,21 @@
+/* [AI-Assisted: Copilot | 2026-10-21] Intent: Style the logo title, red pairing name, and outlined combo image. */
+.site-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(3rem, 15vw, 200px);
+  line-height: 1;
+}
+
+.title-logo {
+  width: auto;
+  height: 1em;
+}
+
+.name {
+  color: red;
+}
+
 .result img {
   width: 240px;  
   height: auto;
@@ -8,5 +26,7 @@
 }
 
 .combo-img {
-  width: 300px;  
+  width: 300px;
+  border: 6px solid red;
+  box-sizing: border-box;
 }
