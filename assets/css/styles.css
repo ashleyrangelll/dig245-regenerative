@@ -1,2 +1,12 @@
+.result img {
+  width: 240px;  
+  height: auto;
+}
 
-/* css */
+.people img {
+  width: 200px;  
+}
+
+.combo-img {
+  width: 300px;  
+}
