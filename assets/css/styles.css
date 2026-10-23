@@ -1,10 +1,21 @@
-/* [AI-Assisted: Copilot | 2026-10-21] Intent: Style the logo title, red pairing name, and outlined combo image. */
+/* [AI-Assisted: Copilot | 2026-10-23] Intent: Set the pink background, center page content, and size/crop the pairing images. */
+body {
+  background-color: #FFDBDB;
+  text-align: center;
+}
+
+p,
+.result {
+  font-family: "Instrument Serif", serif;
+}
+
 .site-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(3rem, 15vw, 200px);
+  font-size: clamp(2.5rem, 11vw, 150px);
   line-height: 1;
+  white-space: nowrap;
 }
 
 .title-logo {
@@ -22,11 +33,21 @@
 }
 
 .people img {
-  width: 200px;  
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.people {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .combo-img {
   width: 300px;
+  display: block;
+  margin: 0 auto;
   border: 6px solid red;
   box-sizing: border-box;
 }
