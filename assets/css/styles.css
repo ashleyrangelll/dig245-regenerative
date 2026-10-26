@@ -1,4 +1,4 @@
-/* [AI-Assisted: Copilot | 2026-10-23] Intent: Set the pink background, center page content, and size/crop the pairing images. */
+/* [AI-Assisted: Copilot | 2026-10-26] Intent: Scale centered content to use page space while keeping it responsive. */
 body {
   background-color: #FFDBDB;
   text-align: center;
@@ -7,13 +7,24 @@ body {
 p,
 .result {
   font-family: "Instrument Serif", serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+}
+
+#generate-couple {
+  background-color: red;
+  color: white;
+  font-family: "Instrument Serif", serif;
+  font-size: 1.4rem;
+  border: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .site-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(2.5rem, 11vw, 150px);
+  font-size: clamp(2rem, 8vw, 110px);
   line-height: 1;
   white-space: nowrap;
 }
@@ -28,13 +39,13 @@ p,
 }
 
 .result img {
-  width: 240px;  
-  height: auto;
+  border: 6px solid red;
+  box-sizing: border-box;
 }
 
 .people img {
-  width: 200px;
-  height: 200px;
+  width: clamp(130px, 38vw, 280px);
+  height: clamp(130px, 38vw, 280px);
   object-fit: cover;
 }
 
@@ -42,12 +53,11 @@ p,
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
 .combo-img {
-  width: 300px;
+  width: min(90vw, 450px);
   display: block;
   margin: 0 auto;
-  border: 6px solid red;
-  box-sizing: border-box;
 }

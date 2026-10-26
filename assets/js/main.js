@@ -72,5 +72,7 @@ function loadRandom() {
   `;
 }
 
-document.addEventListener("click", loadRandom);
+// [AI-Assisted: Copilot | 2026-10-26]
+// Intent: Generate a new couple only when the user activates the button.
+document.querySelector("#generate-couple").addEventListener("click", loadRandom);
 loadRandom(); // show one on page load
